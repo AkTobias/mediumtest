@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base:'/mediumtest',
+  resolve: {
+    alias: {
+      crypto: 'crypto-browserify',  // Add this alias to resolve crypto issue
+    },
+  },
 })
